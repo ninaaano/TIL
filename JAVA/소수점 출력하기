@@ -1,0 +1,54 @@
+이번에 과제를 진행하면서 소수점을 출력하는 일이 있었는데
+간단하지만 매번 잊어버리게 된다
+
+public class Main{
+    public static void main(String[] args){
+        double num1 = 5.0;
+        double num2 = 3.0;
+        double result = num1 / num2;
+
+        (세가지 방법은 이 자리에 들어가게 된다)
+    }
+}
+
+위 예제를 일반 println으로 출력하게 된다면
+1.6666666666666667로 끝자리만 반올림한 결과값이 나오게 된다
+이 때, 소수점 세 번째 자리까지 출력하려면 어떻게 해야할까?
+
+1. System.out.printf() 사용
+나는 println이나 print에만 익숙해져있다.
+printf는 단순하지만 리턴값이 나오지 않는다
+
+System.out.printf("%.3f",result);
+// 1.667
+
+
+2. String.format() 사용
+String클래스의 resultStr 만들고 여기에 String.format("%.3f", result);
+한 String 리턴값을 저장해 그것을 출력하는 방법이다.
+몇자리까지 출력할지는 %.3부분을 수정하고, 어떤 값을 수정할지는 result부분을 수정하면 된다.
+
+String resultStr = String.format("%.3f",result);
+System.out.println(resultStr);
+// 1.667
+
+
+3. Math.round() 사용
+double temp;
+
+// Math.round() 메소드를 사용하면 소숫점 첫째 자리에서 반올림 해버린다.
+temp = Math.round(result);
+System.out.println(temp);
+// 2.0
+
+// 소숫점 세 자리를 얻기 위해 1000을 곱해 정수부분을 네 자리로 만들고
+temp = Math.round(result * 1000);
+System.out.println(temp);
+// 1667.0
+
+// 그 결과를 1000.0으로 나누면 원하는 소숫점 세자리만 담을 수 있다.
+temp = Math.round(result * 1000) / 1000.0;
+System.out.println(temp);
+// 1.667
+
+1000으로 나누면 1000은 int형이라서 소수점 아래가 0이 되어버리니 주의해야한다.
