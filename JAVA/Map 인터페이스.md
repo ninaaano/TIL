@@ -1,0 +1,4 @@
+- 쌍(pair)로 이루어진 객체를 관리하는데 사용하는 메서드들이 선언된 인터페이스
+- 객체는 key-value의 쌍으로 이루어짐
+- key는 중복을 허용하지 않음
+- HashTable, HashMap, Properties, TreeMap 등이 Map 인터페이스를 구현 함
