@@ -5,6 +5,7 @@
 ![WrapperClassStructure](/image/Wrapper_Class_Structure.png)
 
 - Boolean Class Field
+
 public static final Boolean FALSE 
 기본형 false에 해당하는 Boolean Object 객체 반환
 
@@ -15,6 +16,7 @@ public static final Class<Boolean> TYPE
 기본형 boolean을 나타내는 Class 객체 반환
 
 - Boolean Class Constructor
+
 Boolean(String string)
 String에 해당되는 boolean 값을 가진 Boolean 인스턴스 생성
 
@@ -22,6 +24,7 @@ Boolean(boolean value)
 value 값을 가진 새로운 Boolean 인스턴스 생성
 
 - System Class Method
+
 public boolean booleanValue()
 Boolean 인스턴스의 true or false 값을 반환
 
