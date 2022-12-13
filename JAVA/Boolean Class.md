@@ -2,7 +2,7 @@
 - Boolean class는 객체형(Reference Type) 데이터 타입이고, boolean 변수는 기본형(Primitive Type)데이터 타입이다
 
 - Wrapper Class Structure
-![WrapperClassStructure](/image/Wrapper Class Structure.png)
+![WrapperClassStructure](/image/Wrapper_Class_Structure.png)
 
 - Boolean Class Field
 public static final Boolean FALSE 
