@@ -1,27 +1,28 @@
-![](/images/ninaaano/post/dd929283-0f2d-4d7d-b1d8-011244b716a5/image.png)
+![1](https://velog.velcdn.com/images/ninaaano/post/dd929283-0f2d-4d7d-b1d8-011244b716a5/image.png)
 
 여기서 /login으로 요청이 들어오면 user/login으로 보내준다
 근데 이건 컨트롤러에서 요청하는 것일까? html에서 값을 읽는 것일까?
-![](/images/ninaaano/post/baaa0765-11fd-4b40-935b-f61975d126a5/image.png)
+
+![2](https://velog.velcdn.com/images/ninaaano/post/baaa0765-11fd-4b40-935b-f61975d126a5/image.png)
 
 top.html에서 링크로 걸려 있는 부분이다. 만약 로그인을 누르게 된다면 주소창에는
 
-![](/images/ninaaano/post/150b60a2-7d0e-4be1-ace8-98aeff504727/image.png)
+![3](https://velog.velcdn.com/images/ninaaano/post/150b60a2-7d0e-4be1-ace8-98aeff504727/image.png)
 
 로 표시된다. 하이퍼링크에서 걸려있는 /users/ 부분을 지우면
 
-![](/images/ninaaano/post/607bc427-eee5-4ee5-974e-4fd8cc1f470f/image.png)
+![4](https://velog.velcdn.com/images/ninaaano/post/607bc427-eee5-4ee5-974e-4fd8cc1f470f/image.png)
 
 이 부분으로 들어오게 된다.
 
 form은 회원가입으로 들어가는 로직인데 역시 컨트롤러에서도 
 form이 들어오면 회원가입으로 보내주는 컨트롤러 메서드를 가지고 있다
 
-![](/images/ninaaano/post/13243d06-7274-4699-b07d-d29b5ff4c5a5/image.png)
+![5](https://velog.velcdn.com/images/ninaaano/post/13243d06-7274-4699-b07d-d29b5ff4c5a5/image.png)
 
 하지만 난 users를 MvcConfig에서 잡아주지 않았는데?
 
-![](/images/ninaaano/post/6799d947-2795-481a-b02b-b05a1e181558/image.png)
+![6](https://velog.velcdn.com/images/ninaaano/post/6799d947-2795-481a-b02b-b05a1e181558/image.png)
 
 바로 그 부분은 form.html에 들어있다.
 form.html에서 users로 PostMapping이 되고있다
@@ -30,16 +31,16 @@ form.html에서 users로 PostMapping이 되고있다
 
 자꾸 405에러가 나서 확인해보니
 
-![](/images/ninaaano/post/a6c60039-89d6-4bd6-864b-c680bac1618a/image.png)
+![7](https://velog.velcdn.com/images/ninaaano/post/a6c60039-89d6-4bd6-864b-c680bac1618a/image.png)
 
 간단한 자동 컨트롤러를 구성하고 논리가 필요하지 않은 경우에 유용하다 나와있는데
 나는 회원가입시 로그인으로 리다이렉트를 하기때문에 에러가 발생한것 같다
 
-![](/images/ninaaano/post/85e5fcba-fc2b-4739-ac17-200aa8523c1d/image.png)
+![8](https://velog.velcdn.com/images/ninaaano/post/85e5fcba-fc2b-4739-ac17-200aa8523c1d/image.png)
 
 이걸 대체하는 메소드는
 
-![](/images/ninaaano/post/e14ffa5f-92f6-40e3-92db-97938c2250f1/image.png)
+![9](https://velog.velcdn.com/images/ninaaano/post/e14ffa5f-92f6-40e3-92db-97938c2250f1/image.png)
 
 addRedirectViewController를 사용할 수 있을 것 같다
 
